@@ -1,0 +1,17 @@
+`timescale 1ns / 1ps
+
+module comparator_4bit(
+    input [3:0] A,
+    input [3:0] B,
+    output reg A_eq_B,
+    output reg A_gt_B,
+    output reg A_lt_B
+    );
+
+always @(*) begin
+    A_eq_B = (A == B);
+    A_gt_B = (A > B);
+    A_lt_B = (A < B);
+end
+
+endmodule
